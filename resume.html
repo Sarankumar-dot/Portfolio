@@ -3,73 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sarankumar K - Resume</title>
-  <!-- Google Fonts: Roboto Mono -->
+  <!-- Google Font: Roboto Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Roboto Mono', monospace;
-      margin: 20px auto;
+      margin: 10px auto;
       max-width: 800px;
-      line-height: 1.4;
       color: #000;
+      font-size: 13px;
+      line-height: 1.5;
     }
+
     h1 {
       font-size: 24px;
-      margin-bottom: 3px;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
+
     h2 {
-      font-size: 16px;
-      margin-top: 16px;
-      border-bottom: 1px solid #000;
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 14px;
+      border-bottom: 1px solid #ccc;
       padding-bottom: 2px;
     }
-    p, li {
-      font-size: 13px;
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      margin-bottom: 10px;
+      gap: 10px;
     }
-    ul {
-      margin-top: 3px;
-      margin-bottom: 5px;
-      padding-left: 18px;
+
+    .contact div {
+      margin-right: 15px;
+      white-space: nowrap;
     }
+
     a {
       color: #000;
-      text-decoration: underline;
+      text-decoration: underline !important;
+      cursor: pointer;
     }
+
     a:hover {
-      text-decoration: underline;
+      text-decoration: underline !important;
     }
-    .contact {
-      margin-bottom: 10px;
+
+    p, li {
+      margin: 2px 0;
     }
+
+    ul {
+      padding-left: 16px;
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+
     .section {
       margin-bottom: 10px;
     }
+
     .skills-container {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
     }
+
     .skills-column {
-      width: 48%;
+      width: 32%;
+    }
+
+    @media print {
+      a {
+        color: black;
+        text-decoration: none;
+      }
     }
   </style>
 </head>
 <body>
+
   <h1>SARANKUMAR K</h1>
-  <p class="contact">
-    +91 6379891950 | <a href="mailto:kumarsaran2004@gmail.com">kumarsaran2004@gmail.com</a> | Tiruppur<br>
-    <a href="https://www.linkedin.com/in/saran-kumar-/" target="_blank">linkedin.com/in/saran-kumar-</a> | 
-    <a href="https://github.com/Sarankumar-dot" target="_blank">github.com/Sarankumar-dot</a> | 
-    <a href="https://sarankumar7639.neocities.org/" target="_blank">Portfolio</a>
-  </p>
+  <div class="contact">
+    <div>📞 +91 6379891950</div>
+    <div>📧 <a href="mailto:kumarsaran2004@gmail.com">kumarsaran2004@gmail.com</a></div>
+    <div>📍 Tiruppur</div>
+    <div><a href="https://www.linkedin.com/in/saran-kumar-/" target="_blank">LinkedIn</a></div>
+    <div><a href="https://github.com/Sarankumar-dot" target="_blank">GitHub</a></div>
+    <div><a href="https://sarankumar7639.neocities.org/" target="_blank">Portfolio</a></div>
+    <div><a href="https://leetcode.com/u/g37LD2IbUM/" target="_blank">LeetCode</a></div>
+    <div><a href="https://www.codechef.com/users/saran_122004" target="_blank">CodeChef</a></div>
+  </div>
 
   <div class="section">
     <h2>Career Objective</h2>
-    <p>
-      To secure a challenging position where I can effectively contribute my skills as a software professional and continue to grow both personally and professionally.
-    </p>
+    <p>To secure a challenging position where I can effectively contribute my skills as a software professional and continue to grow both personally and professionally.</p>
   </div>
 
   <div class="section">
@@ -77,12 +110,9 @@
     <ul>
       <li><strong>PSNA College of Engineering and Technology, Dindigul</strong><br>
         B.Tech in Computer Science and Business Systems | 2022 – 2026<br>
-        CGPA: 7.99 (up to 5th semester)
-      </li>
-      <li><strong>Saradha Vidhyalaya Matric Higher Secondary School</strong><br>
-        Class 12: 84% (505/600) | 2021 – 2022<br>
-        Class 10: 71.4% (357/500) | 2019 – 2020
-      </li>
+        CGPA: 7.99 (up to 5th semester)</li>
+      <li><strong>Saradha Vidhyalaya Matric Hr. Sec. School</strong><br>
+        Class 12: 84% (2022) | Class 10: 71.4% (2020)</li>
     </ul>
   </div>
 
@@ -93,20 +123,24 @@
         <ul>
           <li>Java</li>
           <li>SQL</li>
-          <li>HTML</li>
-          <li>CSS</li>
+          <li>HTML, CSS</li>
           <li>Python (basics)</li>
-          <li>C (basics)</li>
-          <li>C++ (basics)</li>
+        </ul>
+      </div>
+      <div class="skills-column">
+        <h2>Tools</h2>
+        <ul>
+          <li>VS Code</li>
+          <li>IntelliJ IDEA</li>
+          <li>Eclipse</li>
+          <li>Git & GitHub</li>
         </ul>
       </div>
       <div class="skills-column">
         <h2>Soft Skills</h2>
         <ul>
-          <li>Good communication and interpersonal skills</li>
-          <li>Team collaboration and leadership</li>
-          <li>Ability to work independently</li>
-          <li>Detail-oriented and quick learner</li>
+          <li>Team collaboration</li>
+          <li>Quick learner</li>
         </ul>
       </div>
     </div>
@@ -115,20 +149,28 @@
   <div class="section">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Optimized IoT-based Car Parking System with Facial Recognition</strong></li>
-      <li><strong>Various projects during Web developer internship at ST Software Solutions [offline]</strong></li>
-      <li><strong>Mini-projects during Java internship at CodSoft [online]</strong></li>
+      <li><strong>Optimized IoT-based Car Parking System</strong><br>
+        – Developed a smart parking system using Arduino, ultrasonic sensors, IR sensors, and facial recognition.<br>
+        – Tools: Arduino, Python, OpenCV, Ultrasonic Sensors.
+      </li>
+      <li><strong>Student Management System (Java - OOP)</strong><br>
+        – Created a console-based application to manage student data using Java classes and objects.
+      </li>
+      <li><strong>CGPA Calculator</strong><br>
+        – Built a frontend app for calculating CGPA from semester grades.<br>
+        – Tools: HTML, CSS, JavaScript.
+      </li>
     </ul>
   </div>
 
   <div class="section">
     <h2>Experience</h2>
     <ul>
-      <li><strong>Web Developer Intern, ST Software Solutions [Offline]</strong><br>
-        Worked on various web projects, enhanced skills in HTML, CSS, and basic JavaScript. Built responsive, user-friendly interfaces.
+      <li><strong>Web Developer Intern – ST Software Solutions</strong><br>
+        Worked on responsive layouts and interactive features using HTML, CSS, and basic JavaScript.
       </li>
-      <li><strong>Java Developer Intern, CodSoft [Online]</strong><br>
-        Completed mini-projects focused on Java fundamentals and OOP. Improved problem-solving and wrote clean, maintainable code.
+      <li><strong>Java Developer Intern – CodSoft</strong><br>
+        Built mini Java projects using OOP principles and enhanced debugging and problem-solving skills.
       </li>
     </ul>
   </div>
@@ -136,10 +178,11 @@
   <div class="section">
     <h2>Certifications</h2>
     <ul>
-      <li>Java Masterclass Certification (Udemy)</li>
-      <li>CodeChef - Java, SQL Certifications</li>
-      <li>Certified Cloud Practitioner (AWS)</li>
+      <li>Java Masterclass – Udemy (2024)</li>
+      <li>Java & SQL – CodeChef (2023)</li>
+      <li>AWS Certified Cloud Practitioner (2023)</li>
     </ul>
   </div>
+
 </body>
 </html>
