@@ -1,321 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="Mq6RPZF9V2XSZtj8S3SQwn9UuPNMCudtfs_1ayKBzRs" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sarankumar Portfolio</title>
-  <!-- Google Fonts: Roboto Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- AOS CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <!-- Favicon -->
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    <meta name="google-site-verification" content="Mq6RPZF9V2XSZtj8S3SQwn9UuPNMCudtfs_1ayKBzRs" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sarankumar K - Portfolio</title>
+    
+    <!-- Google Fonts: Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png">
+    
+    <style>
+        :root {
+            --primary-color: #00d4ff;
+            --background-gradient: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            --text-color: #fff;
+            --card-bg: rgba(10, 25, 41, 0.5);
+            --card-hover-bg: rgba(0, 212, 255, 0.15);
+            --blur-effect: blur(10px);
+        }
 
-    body {
-      font-family: 'Roboto Mono', monospace;
-      color: #fff;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      z-index: 1000;
-    }
+        body {
+            font-family: 'Roboto Mono', monospace;
+            color: var(--text-color);
+            background: var(--background-gradient);
+            background-attachment: fixed;
+        }
 
-    .logo {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #00d4ff;
-    }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: var(--blur-effect);
+            -webkit-backdrop-filter: var(--blur-effect);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      transition: color 0.3s, border-bottom 0.3s;
-    }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
 
-    .nav-links a:hover {
-      color: #00d4ff;
-    }
+        .nav-links {
+            display: flex;
+        }
 
-    .nav-links a.active {
-      color: #00d4ff;
-      border-bottom: 2px solid #00d4ff;
-    }
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s, border-bottom-color 0.3s;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
 
-    section {
-      padding: 120px 20px 60px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
 
-    h1, h2 {
-      margin-bottom: 20px;
-      color: #00d4ff;
-    }
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
+        section {
+            padding: 120px 20px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .social-links {
-      margin-bottom: 20px;
-    }
+        h1, h2 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
 
-    .social-links a {
-      color: #00d4ff;
-      font-size: 1.5em;
-      margin-right: 15px;
-      transition: color 0.3s;
-      text-decoration: none;
-    }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: auto;
+            background: var(--card-bg);
+            backdrop-filter: var(--blur-effect);
+            -webkit-backdrop-filter: var(--blur-effect);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        #home .container {
+            background: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            border: none;
+        }
 
-    .social-links a:hover {
-      color: #fff;
-    }
+        .social-links {
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-    .resume-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #00d4ff;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin: 0 15px;
+            transition: color 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            vertical-align: middle;
+        }
 
-    .resume-btn:hover {
-      background: #00a0cc;
-    }
+        .social-links a:hover {
+            color: #fff;
+            transform: scale(1.2);
+        }
 
-    .skills-list, .projects-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
+        .resume-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: var(--primary-color);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
 
-    .skills-list div, .projects-list div {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s, background 0.3s;
-    }
+        .resume-btn:hover {
+            background: #00a0cc;
+            transform: translateY(-3px);
+        }
 
-    .skills-list div:hover, .projects-list div:hover {
-      transform: translateY(-5px);
-      background: rgba(0, 212, 255, 0.2);
-    }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-    form input, form textarea, form button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 5px;
-      outline: none;
-      font-size: 1em;
-    }
+        .skill-card, .project-card, .education-card, .certification-card, .experience-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, background 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
 
-    form button {
-      background: #00d4ff;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+        .skill-card:hover, .project-card:hover, .education-card:hover, .certification-card:hover, .experience-card:hover {
+            transform: translateY(-10px);
+            background: var(--card-hover-bg);
+        }
+        
+        .skill-card { text-align: center; }
+        .skill-card i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-    form button:hover {
-      background: #00a0cc;
-    }
+        .project-card h3, .certification-card h3, .experience-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .project-card p, .certification-card p, .experience-card p, .education-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .project-card p, .certification-card p, .experience-card p {
+             flex-grow: 1;
+        }
+       
+        .project-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            margin-top: auto;
+        }
+        .project-card .tags span {
+            background: rgba(0, 212, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
 
-    footer {
-      background: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      padding: 20px;
-    }
+        .education-card, .experience-card { margin-bottom: 20px; text-align: left;}
+        .education-card h3, .experience-card h3 { color: var(--primary-color); }
+        
+        .certification-card { text-align: center; }
+        .certification-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
 
-    .footer-links a {
-      color: #00d4ff;
-      font-size: 1.5em;
-      margin: 0 10px;
-      transition: color 0.3s;
-      text-decoration: none;
-    }
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            outline: none;
+            font-size: 1em;
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+        
+        form input::placeholder, form textarea::placeholder { color: #aaa; }
 
-    .footer-links a:hover {
-      color: #fff;
-    }
+        form button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: var(--primary-color);
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
 
-    footer p, footer a {
-      margin-top: 10px;
-      font-size: 0.9em;
-      color: #ccc;
-      text-decoration: none;
-    }
+        form button:hover { background: #00a0cc; }
 
-    footer a:hover {
-      color: #fff;
-    }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 40px;
+        }
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin: 0 15px;
+            transition: color 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .footer-links a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: var(--primary-color);
+        }
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        margin-top: 10px;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 68px; 
+                left: 0;
+                background: rgba(0, 0, 0, 0.95);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                padding: 15px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                text-align: center;
+                margin: 0;
+            }
+            .nav-links a:hover, .nav-links a.active {
+                border-bottom-color: var(--primary-color);
+            }
+            .hamburger {
+                display: block;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .container { padding: 1.5rem; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">Sarankumar</div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Sarankumar</div>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-  <!-- Sections -->
-  <section id="home" data-aos="fade-up">
-    <div class="container">
-      <h1>Hello! I'm Sarankumar</h1>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/saran-kumar-/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Sarankumar-dot" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:kumarsaran2004@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      </div>
-      <p>
-        I am Sarankumar, a dedicated and results-driven developer with expertise in Java, HTML, CSS, and SQL. I have a strong foundation in building efficient, scalable applications and designing clean, user-focused web interfaces. With a keen attention to detail and a commitment to writing clean, maintainable code, I continuously strive to learn new technologies, solve complex problems, and deliver high-quality software solutions that create meaningful impact.
-      </p>
-      <a href="https://drive.google.com/file/d/17bm2U74BiXfN9cluZCaUCthw5Z5GnQ4Z/view?usp=sharing" target="_blank" class="resume-btn">Download Resume</a>
-    </div>
-  </section>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container" data-aos="fade-up">
+            <h1>Hello! I'm Sarankumar</h1>
+            <p style="text-align: justify; margin-bottom: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                A passionate and results-driven developer currently pursuing my B.Tech in Computer Science and Business Systems. With a strong foundation in Java, SQL, and web technologies, I specialize in building efficient, scalable applications and clean, user-focused interfaces. I am committed to writing maintainable code and continuously learning to solve complex problems and create meaningful impact.
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/saran-kumar-/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Sarankumar-dot" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:kumarsaran2004@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://leetcode.com/u/g37LD2IbUM/" target="_blank" aria-label="LeetCode">
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="height: 24px; filter: invert(1);">
+                </a>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://drive.google.com/file/d/1_BqK1i3msb6kd4Sxl2llZHgUp10VZAKp/view?usp=sharing" target="_blank" class="resume-btn">Download Resume</a>
+            </div>
+        </div>
+    </section>
 
-  <section id="education" data-aos="fade-up">
-    <div class="container">
-      <h2>Education</h2>
-      <p><strong>PSNA College of Engineering and Technology</strong><br>
-        B.Tech in Computer Science and Business Systems<br>
-        CGPA: 7.99 (up to 5th semester)<br>
-        2022 – 2026
-      </p>
-      <br>
-      <p><strong>Saradha Vidhyalaya Matric Higher Secondary School</strong><br>
-        Class 12: 84% (505/600)<br>
-        Class 10: 71.4% (357/500)<br>
-        2008 – 2022
-      </p>
-    </div>
-  </section>
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container" data-aos="fade-up">
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3><i class="fas fa-graduation-cap"></i> PSNA College of Engineering and Technology</h3>
+                <p><strong>B.Tech in Computer Science and Business Systems</strong></p>
+                <p>CGPA: 7.99 (up to 5th semester)</p>
+                <p><em>2022 – 2026</em></p>
+                <p><strong>Relevant Coursework:</strong> Data Structures, Algorithms, OOP, Database Management Systems, Web Development.</p>
+            </div>
+            <div class="education-card">
+                <h3><i class="fas fa-school"></i> Saradha Vidhyalaya Matric Higher Secondary School</h3>
+                <p><strong>Class 12:</strong> 84% (505/600)</p>
+                <p><strong>Class 10:</strong> 71.4% (357/500)</p>
+                <p><em>2008 – 2022</em></p>
+            </div>
+        </div>
+    </section>
 
-  <section id="skills" data-aos="fade-up">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <div>Java</div>
-        <div>SQL</div>
-        <div>HTML</div>
-        <div>CSS</div>
-        <div>Python(basics)</div>
-        <div>C(basics)</div>
-        <div>C++(basics)</div>
-      </div>
-    </div>
-  </section>
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container" data-aos="fade-up">
+            <h2>Experience</h2>
+            <div class="experience-card">
+                <h3><i class="fas fa-briefcase"></i> Web Developer Intern - ST Software Solutions</h3>
+                <p>Worked on responsive layouts and interactive features using HTML, CSS, and basic JavaScript.</p>
+            </div>
+            <div class="experience-card">
+                <h3><i class="fas fa-briefcase"></i> Java Developer Intern - CodSoft</h3>
+                <p>Built mini Java projects using OOP principles and enhanced debugging and problem-solving skills.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="projects" data-aos="fade-up">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-list">
-        <div>Optimized IoT-based Car Parking System with Facial Recognition</div>
-        <div>Various projects during my Web developer internship at ST Software Solutions [offline]</div>
-        <div>Various mini-projects during Java internship at CodSoft [online]</div>
-      </div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container" data-aos="fade-up">
+            <h2>Skills</h2>
+            <div class="grid-container">
+                <div class="skill-card"><i class="fab fa-java" style="color:#f89820;"></i><p>Java</p></div>
+                <div class="skill-card"><i class="fas fa-database" style="color:#4db33d;"></i><p>SQL</p></div>
+                <div class="skill-card"><i class="fab fa-html5" style="color:#e44d26;"></i><p>HTML</p></div>
+                <div class="skill-card"><i class="fab fa-css3-alt" style="color:#264de4;"></i><p>CSS</p></div>
+                <div class="skill-card"><i class="fab fa-python" style="color:#306998;"></i><p>Python (Basics)</p></div>
+                <div class="skill-card"><i class="fas fa-code" style="color:#a8b9cc;"></i><p>C/C++ (Basics)</p></div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact" data-aos="fade-up">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container" data-aos="fade-up">
+            <h2>Projects</h2>
+            <div class="grid-container">
+                <div class="project-card">
+                    <h3>IoT Car Parking System</h3>
+                    <p>Developed a smart parking system using Arduino, sensors, and facial recognition for efficient vehicle management.</p>
+                    <div class="tags"><span>Arduino</span><span>Python</span><span>OpenCV</span></div>
+                </div>
+                <div class="project-card">
+                    <h3>Student Management System</h3>
+                    <p>A console-based application to manage student data using Java, focusing on Object-Oriented principles.</p>
+                    <div class="tags"><span>Java</span><span>OOP</span></div>
+                </div>
+                <div class="project-card">
+                    <h3>CGPA Calculator</h3>
+                    <p>A user-friendly frontend application for calculating CGPA from semester grades, built with web technologies.</p>
+                    <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/saran-kumar-/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/Sarankumar-dot" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:kumarsaran2004@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      <a href="tel:6379891950"><i class="fas fa-phone"></i></a>
-    </div>
-    <p>Email: <a href="mailto:kumarsaran2004@gmail.com">kumarsaran2004@gmail.com</a> | Phone: <a href="tel:6379891950">6379891950</a></p>
-    <p>© 2025 Sarankumar. All rights reserved.</p>
-  </footer>
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container" data-aos="fade-up">
+            <h2>Certifications</h2>
+            <div class="grid-container">
+                <div class="certification-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Java Masterclass</h3>
+                    <p>Udemy (2024)</p>
+                </div>
+                <div class="certification-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Java & SQL</h3>
+                    <p>CodeChef (2023)</p>
+                </div>
+                <div class="certification-card">
+                    <i class="fas fa-award"></i>
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p>Amazon Web Services (2023)</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- AOS JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/mvojoyyl" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-links a");
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/saran-kumar-/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Sarankumar-dot" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:kumarsaran2004@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:6379891950" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://leetcode.com/u/g37LD2IbUM/" target="_blank" aria-label="LeetCode">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="height: 24px; filter: invert(1);">
+            </a>
+        </div>
+        <p>Email: <a href="mailto:kumarsaran2004@gmail.com">kumarsaran2004@gmail.com</a> | Phone: <a href="tel:6379891950">6379891950</a></p>
+        <p>© 2025 Sarankumar. All rights reserved.</p>
+    </footer>
 
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
 
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Active Nav Link on Scroll
+        const sections = document.querySelectorAll("section");
+        const navLinksAnchors = document.querySelectorAll(".nav-links a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinksAnchors.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
