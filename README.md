@@ -3,7 +3,7 @@
 This is my personal portfolio website built using HTML, CSS, JavaScript, and AOS animations. It showcases my education, experience, projects, skills, certifications, and contact information.
 
 ## 🔗 Live Demo
-[Click here to view my portfolio](https://sarankumark.github.io/portfolio-website/)
+[Click here to view my portfolio](https://sarankumar7639.neocities.org/)
 
 ## 💡 Features
 - Responsive and modern design
