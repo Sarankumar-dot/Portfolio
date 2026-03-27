@@ -1,0 +1,109 @@
+.skills {
+  padding: var(--space-24) var(--space-8);
+  background: var(--surface-container-low);
+}
+
+.skills__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s var(--ease-snappy);
+}
+
+.skills__inner--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.skills__category {
+  background: var(--surface-container-high);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  transition: all var(--transition-fast);
+  opacity: 0;
+  animation: fadeInUp 0.6s var(--ease-snappy) forwards;
+}
+
+.skills__category:hover {
+  background: var(--surface-container-highest);
+  transform: translateY(-4px);
+}
+
+.skills__category-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.skills__category-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.skills__category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.skills__item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.skills__item-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--on-surface-variant);
+}
+
+.skills__item-level {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  font-family: var(--font-headline);
+}
+
+.skills__bar {
+  height: 4px;
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skills__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-container));
+  border-radius: var(--radius-full);
+  transition: width 1s var(--ease-snappy);
+}
+
+@media (max-width: 900px) {
+  .skills__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}

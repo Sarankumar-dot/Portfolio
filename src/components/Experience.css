@@ -1,0 +1,128 @@
+.experience {
+  padding: var(--space-24) var(--space-8);
+  background: var(--surface-container-low);
+}
+
+.experience__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s var(--ease-snappy);
+}
+
+.experience__inner--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience__content {
+  margin-top: var(--space-12);
+}
+
+.experience__card {
+  background: var(--surface-container-high);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.experience__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-container), var(--tertiary));
+}
+
+.experience__card:hover {
+  background: var(--surface-container-highest);
+}
+
+.experience__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-8);
+}
+
+.experience__role {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: var(--space-2);
+}
+
+.experience__company {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.experience__badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: var(--space-2) var(--space-4);
+  background: rgba(93, 201, 255, 0.1);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+}
+
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.experience__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.95rem;
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+}
+
+.experience__list-icon .material-icons {
+  color: var(--primary-dim);
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.experience__tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.experience__tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: var(--space-1) var(--space-3);
+  background: var(--surface-container-lowest);
+  color: var(--on-surface-variant);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.experience__tag:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .experience__card {
+    padding: var(--space-6);
+  }
+
+  .experience__card-header {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+}
